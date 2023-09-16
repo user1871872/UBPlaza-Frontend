@@ -31,7 +31,7 @@ export default function Product() {
                   <Link to={`${product._id}`}>
                   <img src={product.image} style={{width:"100%", height:"20ch", objectFit:"contain", objectPosition:"center"}} alt='img'/>
                   </Link>
-                  <p>Title:{product.title}</p>
+                 {product.title}
                   <p>Price:{product.price}</p>
                   <p>Stock:{product.stock}</p>
                   {/* <button id='btn' onClick={""}>update</button>

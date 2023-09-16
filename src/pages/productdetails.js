@@ -26,14 +26,16 @@ console.log("cart", cart)
 
   return (
     <div>
-    {productList && <div className='ml-44 p-5'>
-    <img src={productList.image} style={{width:"100%", height:"70ch", objectFit:"contain", objectPosition:"left"}} alt='img'/>
+    {productList && <div className='ml-44 p-5 flex flex-row items-center'>
+    <img src={productList.image} style={{width:"50%", height:"70ch", objectFit:"contain", objectPosition:"left"}} alt='img'/>
                  
-                  <div className=''>
-                  <p>Title:{productList.title}</p>
-                  <p>Price:{productList.price}</p>
-                  <p>Stock:{productList.stock}</p>
-                  <button onClick={()=>setCart([  productList,...cart])} className='bg-blue-500 rounded-md'>Add to cart</button>
+                  <div className=' border shadow-md p-10 rounded-md'>
+                  <p className='text-5xl'>{productList.title}</p>
+                  <div className='flex justify-between p-5'>
+                  <p className='text-red-600'>Price:{productList.price}</p>
+                  <p className='text-green-600'>Stock:{productList.stock}</p>
+                  </div>
+                  <button onClick={()=>setCart([  productList,...cart])} className='bg-blue-500 rounded-md p-3'>Add to cart</button>
                   </div>
                   {/* <button onClick={''}>Reserve</button> */}
     </div>
